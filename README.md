@@ -46,3 +46,9 @@
 ###### Feature 6: Mixins
 ###### Feature 7: Built-In support for reg-ex
 ###### Feature 8: Supports exception handling
+
+### 3. IRB(interactive ruby shell)
+#### Ans:-
+        IRB is an interactive programming environment that comes with Ruby.
+        To invoke it, type: irb
+        To exit IRB, type: quit or exit
