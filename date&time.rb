@@ -1,3 +1,13 @@
+require 'time'
+
+t1 = DateTime.new
+t2 = DateTime.new + 30
+next_30_days = t1..t2
+
+# Example use
+# p next_30_days.select{ |n| n.friday? }.map {|m| m.day}
+p next_30_days.select(&:friday?).map(&:day)
+
 time1 = Time.new
 puts "Current Time : " + time1.inspect
 
