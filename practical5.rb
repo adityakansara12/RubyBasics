@@ -1,3 +1,7 @@
+=begin
+  Practice various types of iterators available with the above arrays ( each, each_with_index, map etc.)
+=end
+
 #Iterators
 (0..9).each do |i|
   puts i

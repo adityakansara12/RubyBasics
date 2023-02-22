@@ -1,3 +1,7 @@
+=begin
+  Create a method that uses proc/lambda
+=end
+
 # BLOCKS
 
 [1,2,3].each do |i|

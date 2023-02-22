@@ -1,3 +1,11 @@
+=begin
+  Create a Class named Car
+  Create a method that takes an argument of price and returns the integer value of the price plus 18% GST of that price
+  Create a method and create an instance and local variable with the same name color and test the scope of both variable
+  Create a constant within the class named no of wheels, set value 4, and use it in a different method
+  Create a method to take an argument for the color and print string: the color of the car is ___( fill in the color name here from the argument)
+  Create an enum for fuel type and use it with any method
+=end
 class Car
 
   NO_OF_WHEELS = 4

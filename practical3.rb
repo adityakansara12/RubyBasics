@@ -1,3 +1,7 @@
+=begin
+  Create an array with stings containing colors and perform various available array methods on it
+=end
+
 arr = ["red", "black", "yellow", "pink", "blue", "green", "purple", "white", "orange", "gray"]
 str=""
 arr.reverse_each { |word| str += "#{word} " }

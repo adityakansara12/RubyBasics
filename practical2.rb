@@ -1,3 +1,7 @@
+=begin
+  Create an array from 1 to 10 and perform all methods on the array
+=end
+
 arr = Array.new(10) { |i| i+1 }
 
 p arr.at(5)
