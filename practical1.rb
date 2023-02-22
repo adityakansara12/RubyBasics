@@ -1,21 +1,35 @@
-require 'enum'
-
 class Car
 
   NO_OF_WHEELS = 4
 
-  @fueltype = Enum.new(:PETROL, :DIESEL, :CNG)
+  FUEL = {
+    cng: 1,
+    petrol: 2,
+    diesel: 3
+  }
 
   def initialize()
-    @color = "White" # This variable can be accessed within whole class
+    print "Enter car price: "
+    price = gets.to_i
+    puts "Price with 18% gst #{price_with_gst(price)}"
+
+    print "Enter car color: "
+    set_color(gets.to_s) # This variable can be accessed within whole class
+    get_color
+
+    puts "Number of wheels: #{get_wheels}"
+
+    print "Fuel type: Enter 1 for CNG, 2 for PETROL, 3 for DIESEL: "
+    set_fuel_type(gets.to_i)
+    puts "Fuel type selected: #{get_fuel_type.upcase}"
+  end
+
+  def set_fuel_type(value)
+    @fuel = FUEL.key(value)
   end
 
   def get_fuel_type
-    @fueltype
-  end
-
-  def set_fuel_type(fuel)
-    @fueltype = fuel
+    @fuel
   end
 
   def price_with_gst(price)
@@ -37,10 +51,3 @@ class Car
 end
 
 car1 = Car.new
-p car1.price_with_gst(1000000)
-car1.get_wheels
-car1.get_color
-car1.set_color("black")
-car1.get_color
-car1.set_fuel_type(:CNG)
-p car1.get_fuel_type
