@@ -73,7 +73,8 @@
 
 # u1.login("Ai","asd")
 
-#Abstraction
+#Abstraction: When method "area" is called using Rectangle object interpreter of Ruby does not get confused to call "area" method of Rectangle or Circle
+#Polymorphism: We can define two same type of methods which has the same meaning but different definitions as shown in below example
 # class Shape
 #     def area
 #     end
@@ -99,7 +100,13 @@
 # p c1.area 23
 
 #Inheritance
+module Four_leg_animal
+    def legs
+        puts "4-leg animal"
+    end
+end
 class Animal
+    extend Four_leg_animal
     def initialize
         puts "An animal object is initialized"
     end
@@ -115,6 +122,7 @@ class Animal
 end
 
 class Dog < Animal
+    include Four_leg_animal
     def initialize
         puts "A Dog object is initialized"
     end
@@ -127,3 +135,24 @@ class Dog < Animal
         puts "A Dog is eating"
     end
 end
+
+class Cat < Animal
+    def initialize
+        puts "A Cat object is initialized"
+    end
+
+    def walking
+        puts "A Cat is walking"
+    end
+
+    def eating
+        puts "A Cat is eating"
+    end
+end
+
+d1 = Dog.new
+d1.legs # include keyword used so "legs" method is an instance method
+Cat.legs # extend keyword used so "legs" method is Class method
+Animal.legs # extend keyword used so "legs" method is Class method
+p Cat.ancestors # "ancestors" is a class method: It can only be accessed using class but not by an object.
+
