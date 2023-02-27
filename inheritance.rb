@@ -16,11 +16,11 @@ Multilevel inheritance: 1. BMW < SUV < Car
 class Car
 
   def initialize color, type, owner_name1, company
-		@color = color
-		@type = type
-		self.owner_name= owner_name1
-		puts "A #{company} of color: #{@color} and type: #{@type} is purchased by #{owner_name}"
-	end
+    @color = color
+    @type = type
+    self.owner_name= owner_name1
+    puts "A #{company} of color: #{@color} and type: #{@type} is purchased by #{owner_name}"
+  end
 
   attr_accessor :owner_name
 end
@@ -28,63 +28,63 @@ end
 class Sedan < Car
 
   def initialize color, owner_name, company
-		super(color, "SEDAN", owner_name, company)
-	end
+    super(color, "SEDAN", owner_name, company)
+  end
 
 end
 
 class SUV < Car
 
   def initialize color, owner_name, company
-		super(color, "SUV", owner_name, company)
-	end
+    super(color, "SUV", owner_name, company)
+  end
 
 end
 
 class Hatchback < Car
 
   def initialize color, owner_name, company
-		super(color, "HATCHBACK", owner_name, company)
-	end
+    super(color, "HATCHBACK", owner_name, company)
+  end
 
 end
 
 module Sunroof
-	def sunroof_open
-		puts "Sunroof opening..."
-	end
+  def sunroof_open
+    puts "Sunroof opening..."
+  end
 
-	def sunroof_close
-		puts "Sunroof closing..."
-	end
+  def sunroof_close
+    puts "Sunroof closing..."
+  end
 end
 
 module AutomaticViper
-	def raining
-		puts "Viper started working"
-	end
+  def raining
+    puts "Viper started working"
+  end
 end
 
 class BMW < SUV
 include Sunroof
   def initialize color, owner_name
-		super(color, owner_name, "BMW")
-	end
+    super(color, owner_name, "BMW")
+  end
 end
 
 class MERCEDES < Sedan
 include AutomaticViper
 include Sunroof
-	def initialize color, owner_name
-		super(color, owner_name, "MERCEDES")
-	end
+  def initialize color, owner_name
+    super(color, owner_name, "MERCEDES")
+  end
 end
 
 class AUDI < Hatchback
 include AutomaticViper
-	def initialize color, owner_name
-		super(color, owner_name, "AUDI")
-	end
+  def initialize color, owner_name
+    super(color, owner_name, "AUDI")
+  end
 end
 
 

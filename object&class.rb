@@ -6,21 +6,21 @@
 class Car
 
   def initialize color, owner_name1, company
-		@color = color
-		self.owner_name= owner_name1
-		puts "A #{company} of color: #{@color} is purchased by #{owner_name}"
-	end
+    @color = color
+    self.owner_name= owner_name1
+    puts "A #{company} of color: #{@color} is purchased by #{owner_name}"
+  end
 
-	def sell_the_car_to buyer_name
-		self.owner_name=  buyer_name
-	end
+  def sell_the_car_to buyer_name
+    self.owner_name=  buyer_name
+  end
 
-	attr_reader :owner_name
+  attr_reader :owner_name
 
 
-	private
+  private
 
-	attr_writer :owner_name
+  attr_writer :owner_name
 end
 
 car1 = Car.new "red", "aditya", "mercedes"

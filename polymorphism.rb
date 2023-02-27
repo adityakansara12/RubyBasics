@@ -17,14 +17,14 @@ class Car
   end
 
   def depreciation
-	end
+  end
 end
 
 class Sedan < Car
 
   def depreciation
     puts "A Sedan car price depreciated to 90% of the buying price after 1 year."
-	end
+  end
 
   def engine_start
     puts "Sedan car engine started"
@@ -35,7 +35,7 @@ class SUV < Car
 
   def depreciation
     puts "A SUV car price depreciated to 80% of the buying price after 1 year."
-	end
+  end
   def engine_start
     puts "SUV car engine started"
   end
@@ -44,7 +44,7 @@ end
 class Hatchback < Car
   def depreciation
     puts "A Hatchback car price depreciated to 70% of the buying price after 1 year."
-	end
+  end
   def engine_start
     puts "HATCHBACK car engine started"
   end

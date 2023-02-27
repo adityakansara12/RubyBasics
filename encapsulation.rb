@@ -5,55 +5,55 @@
 
 class Car
   def initialize color, type, owner_name1, company
-		@color = color
-		@type = type
-		self.owner_name= owner_name1
-		puts "A #{company} of color: #{@color} and type: #{@type} is purchased by #{owner_name}"
-	end
+    @color = color
+    @type = type
+    self.owner_name= owner_name1
+    puts "A #{company} of color: #{@color} and type: #{@type} is purchased by #{owner_name}"
+  end
 
-	def engine_start
-		inject_fuel
-		generate_spark
-	end
+  def engine_start
+    inject_fuel
+    generate_spark
+  end
 
-	def engine_stop
-		stop_fuel
-	end
+  def engine_stop
+    stop_fuel
+  end
 
-	def sell_the_car_to buyer_name
-		self.owner_name=  buyer_name
-	end
+  def sell_the_car_to buyer_name
+    self.owner_name=  buyer_name
+  end
 
-	def depreciation
-	end
+  def depreciation
+  end
 
-	attr_reader :owner_name
+  attr_reader :owner_name
 
 
-	private
+  private
 
-	def inject_fuel
-		puts "Engine Starting"
-	end
+  def inject_fuel
+    puts "Engine Starting"
+  end
 
-	def generate_spark
-		move_pistons
-	end
+  def generate_spark
+    move_pistons
+  end
 
-	def move_pistons
-		puts "Engine Started"
-	end
+  def move_pistons
+    puts "Engine Started"
+  end
 
-	def stop_fuel
-		puts "Engine Stopping"
-		stop_pistons
-	end
+  def stop_fuel
+    puts "Engine Stopping"
+    stop_pistons
+  end
 
-	def stop_pistons
-		puts "Engine Stopped"
-	end
+  def stop_pistons
+    puts "Engine Stopped"
+  end
 
-	attr_writer :owner_name
+  attr_writer :owner_name
 end
 
 car1 = Car.new "Red", "Sedan", "Aditya", "BMW"
